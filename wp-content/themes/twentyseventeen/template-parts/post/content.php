@@ -57,7 +57,16 @@
 			get_the_title()
 		) );
 
-		wp_link_pages( array(
+		?>
+<hr>
+
+
+				<?php echo 'Color field '. get_post_meta(get_the_ID(),'colorpicker1',true); ?><br>
+				<?php echo 'Text field '. get_post_meta(get_the_ID(),'testfield1',true); ?><br>
+				<?php echo 'My favourite foods '. join(', ',get_post_meta(get_the_ID(),'favfoods')); ?>
+
+
+		<?php wp_link_pages( array(
 			'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
 			'after'       => '</div>',
 			'link_before' => '<span class="page-number">',
